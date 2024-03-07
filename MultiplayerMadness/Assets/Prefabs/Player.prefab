@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3046916419
+  GlobalObjectIdHash: 2999560456
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   inputReader: {fileID: 11400000, guid: ea12ad62b697fdb43909a24e678030dd, type: 2}
   bodyTransform: {fileID: 7373224339998192580}
   rb: {fileID: 5945083109850213445}
-  movementSpeed: 4
+  movementSpeed: 5
   turningRate: 270
 --- !u!1 &6669742927974947066
 GameObject:
