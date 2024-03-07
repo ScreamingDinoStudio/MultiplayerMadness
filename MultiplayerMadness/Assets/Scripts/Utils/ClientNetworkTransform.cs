@@ -10,7 +10,16 @@ public class ClientNetworkTransform : NetworkTransform
         base.OnNetworkSpawn();
         CanCommitToTransform = IsOwner;
     }
-
+    override protected void Update()
+    {
+        CanCommitToTransform = IsOwner;
+        base.Update();
+        if (!IsHost && NetworkManager != null && NetworkManager.IsConnectedClient && CanCommitToTransform)
+            {
+                TryCommitTransformToServer(transform, NetworkManager.LocalTime.Time);
+            }
+    }
+    /*
     protected override void Update()
     {
         CanCommitToTransform = IsOwner;
@@ -26,6 +35,7 @@ public class ClientNetworkTransform : NetworkTransform
             }
         }
     }
+    */
     protected override bool OnIsServerAuthoritative()
     {
         return false;
